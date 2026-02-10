@@ -1,334 +1,302 @@
 <!DOCTYPE HTML>
 <!--
-	ZeroFour by HTML5 UP
+	Massively by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html lang="fr">
-	<head>
-		<title>Portfolio | Lounes Djayet</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="Portfolio de Lounes Djayet — Data Scientist — Projets, Compétences, Contact" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+<head>
+	<title>Portfolio | Lounes Djayet</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="description" content="Portfolio de Lounes Djayet — Data Scientist — Projets, Compétences, Contact" />
 
-		<!-- ✅ HERO fixed + aligned (no more “décalée”) -->
-		<style>
-			#banner { text-align: center; }
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
-			#banner .hero-wrap{
-				max-width: 980px;
-				margin: 0 auto;
-				padding: 0 18px;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 10px;
+	<style>
+		/* ---------- INTRO ---------- */
+		#intro p { max-width: 980px; margin-left:auto; margin-right:auto; }
+
+		.badges{
+			display:flex; flex-wrap:wrap; gap:.55rem;
+			justify-content:center; margin-top:1rem;
+		}
+		.badge{
+			display:inline-block;
+			border:1px solid rgba(255,255,255,.35);
+			padding:.35rem .7rem;
+			border-radius:999px;
+			font-size:.85rem;
+			letter-spacing:.03em;
+			text-transform:uppercase;
+			opacity:.95;
+			white-space:nowrap;
+		}
+
+		/* ---------- PROJETS : éviter chevauchement ---------- */
+		/* force les titres à casser la ligne et rester dans la carte */
+		.posts article header h2,
+		.post.featured header h2{
+			word-break: break-word;
+			overflow-wrap: anywhere;
+			text-align:center;
+			margin-bottom: .4rem;
+		}
+		.posts article header,
+		.post.featured header.major{
+			text-align:center;
+		}
+
+		/* met un peu plus d’air */
+		.posts article p{
+			text-align:center;
+			max-width: 820px;
+			margin-left:auto;
+			margin-right:auto;
+		}
+
+		/* images responsives propres */
+		.posts article .image.fit img,
+		.post.featured .image.main img{
+			width:100%;
+			height:auto;
+			display:block;
+		}
+
+		/* uniformiser la taille des images dans les cartes */
+		.posts article .image.fit{
+			max-width: 720px;
+			margin-left:auto;
+			margin-right:auto;
+		}
+
+		/* boutons centrés */
+		.posts article .actions,
+		.post.featured .actions{
+			justify-content:center;
+		}
+
+		/* ---------- FOOTER ---------- */
+		#footer .split.contact section { padding-top: 1.4rem; padding-bottom: 1.4rem; }
+		#footer form { display:none; } /* cache formulaire inutile */
+
+		/* ---------- FIX RESPONSIVE ---------- */
+		/* sur les écrans moyens/petits : 1 colonne, donc zéro overlap */
+		@media (max-width: 980px){
+			.posts{
+				display:block !important;
 			}
-
-			#banner .hero-title { line-height: 1.05; margin: 0; }
-
-			#banner .hero-name{
-				display:block;
-				font-size: 3.1rem;
-				letter-spacing: .06em;
-				font-weight: 800;
-				text-transform: uppercase;
+			.posts article{
+				width:100% !important;
+				margin: 0 0 2rem 0 !important;
 			}
+		}
+	</style>
+</head>
 
-			#banner .hero-role{
-				display:block;
-				font-size: 1.6rem;
-				font-weight: 700;
-				margin-top: .35em;
-				opacity: .98;
-			}
+<body class="is-preload">
+	<div id="wrapper" class="fade-in">
 
-			#banner .hero-subtitle{
-				margin: 6px 0 0 0;
-				font-size: 1.08rem;
-				opacity: .95;
-			}
+		<!-- Intro -->
+		<div id="intro">
+			<h1>LOUNES DJAYET</h1>
+			<p>
+				<strong>Data Scientist</strong><br/>
+				Ancien ingénieur en automatisme industriel • Étudiant en <strong>Sciences des données appliquées</strong> (La Cité, Ottawa/Gatineau).<br/>
+				J’analyse, nettoie et transforme des données en insights clairs grâce à la visualisation et au storytelling.
+			</p>
 
-			#banner .hero-tagline{
-				margin: 0;
-				font-size: 1rem;
-				opacity: .92;
-				max-width: 860px;
-			}
+			<div class="badges">
+				<span class="badge">Analyse de données</span>
+				<span class="badge">Nettoyage</span>
+				<span class="badge">EDA</span>
+				<span class="badge">Visualisation</span>
+				<span class="badge">Storytelling</span>
+			</div>
 
-			#banner .hero-actions{
-				margin-top: 10px;
-			}
+			<ul class="actions">
+				<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continuer</a></li>
+			</ul>
+		</div>
 
-			#banner .hero-links{
-				margin-top: 6px;
-				font-size: .95rem;
-				opacity: .9;
-			}
+		<!-- Header -->
+		<header id="header">
+			<a href="index.html" class="logo">Portfolio</a>
+		</header>
 
-			#banner .hero-links span{
-				margin: 0 10px;
-				opacity: .6;
-			}
+		<!-- Nav -->
+		<nav id="nav">
+			<ul class="links">
+				<li class="active"><a href="#main" class="scrolly">Projets</a></li>
+				<li><a href="#skills" class="scrolly">Compétences</a></li>
+				<li><a href="#footer" class="scrolly">Contact</a></li>
+			</ul>
 
-			#banner .hero-links a{
-				text-decoration: none;
-				border-bottom: 1px dotted rgba(255,255,255,.35);
-			}
+			<ul class="icons">
+				<li><a href="https://github.com/Lounesdjl04" class="icon brands fa-github" target="_blank" rel="noopener"><span class="label">GitHub</span></a></li>
+				<li><a href="https://www.linkedin.com/in/lounes-djayet-a0b046367/" class="icon brands fa-linkedin" target="_blank" rel="noopener"><span class="label">LinkedIn</span></a></li>
+				<li><a href="mailto:lounesdjayet112@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+			</ul>
+		</nav>
 
-			/* Mobile */
-			@media (max-width: 736px){
-				#banner .hero-name{ font-size: 2.2rem; }
-				#banner .hero-role{ font-size: 1.2rem; }
-				#banner .hero-subtitle{ font-size: 1rem; }
-			}
-		</style>
-	</head>
+		<!-- Main -->
+		<div id="main">
 
-	<body class="homepage is-preload">
-		<div id="page-wrapper">
+			<!-- Featured Project -->
+			<article class="post featured">
+				<header class="major">
+					<span class="date">2026</span>
+					<h2>
+						<a href="https://github.com/Lounesdjl04/revenus-diplome-canada" target="_blank" rel="noopener">
+							Recensement 2021 — Revenus & Diplôme (Canada)
+						</a>
+					</h2>
 
-			<!-- Header -->
-			<div id="header-wrapper">
-				<div class="container">
+					<p>
+						Analyse des revenus selon le niveau de diplôme (Recensement 2021). EDA, visualisations,
+						tests d’hypothèses et modèle de régression pour identifier les facteurs les plus influents.
+					</p>
 
-					<!-- Header -->
-					<header id="header">
-						<div class="inner">
+					<p class="project-tags" style="text-align:center; opacity:.9;">
+						✅ Nettoyage • ✅ Visualisation • ✅ Hypothèses • ✅ Régression
+					</p>
+				</header>
 
-							<!-- Logo -->
-							<h1><a href="index.html" id="logo">Lounes Djayet</a></h1>
+				<!-- ⚠️ ton dossier semble s’appeler "imagess" sur GitHub -->
+				<a href="https://github.com/Lounesdjl04/revenus-diplome-canada" target="_blank" rel="noopener" class="image main">
+					<img src="imagess/01.png" alt="Revenus moyen par diplôme — Recensement 2021" />
+				</a>
 
-							<!-- Nav -->
-							<nav id="nav">
-								<ul>
-									<li class="current_page_item"><a href="index.html">Accueil</a></li>
-									<li><a href="#projects">Projets</a></li>
-									<li><a href="#skills">Compétences</a></li>
-									<li><a href="#about">À propos</a></li>
-									<li><a href="#contact">Contact</a></li>
-								</ul>
-							</nav>
+				<ul class="actions special">
+					<li>
+						<a href="https://github.com/Lounesdjl04/revenus-diplome-canada" target="_blank" rel="noopener" class="button large">
+							Voir le repo GitHub
+						</a>
+					</li>
+				</ul>
+			</article>
 
-						</div>
+			<!-- Other Projects -->
+			<section class="posts">
+
+				<!-- Amazon -->
+				<article id="amazon">
+					<header>
+						<span class="date">2026</span>
+						<h2>Dashboard — Analyse Amazon (Power BI)</h2>
+						<p style="margin-top:.2rem; opacity:.85;">
+							Audit Power BI • Gestalt • Hiérarchie visuelle • Réduction de charge cognitive
+						</p>
 					</header>
 
-					<!-- ✅ Banner (Hero) -->
-					<div id="banner">
-						<div class="hero-wrap">
-							<h2 class="hero-title">
-								<strong class="hero-name">Lounes Djayet</strong>
-								<span class="hero-role">Data Scientist</span>
-							</h2>
+					<a href="#" class="image fit">
+						<img src="imagess/02.png" alt="Dashboard Amazon Power BI" />
+					</a>
 
-							<p class="hero-subtitle">
-								Ancien ingénieur en automatisme industriel • Étudiant en Sciences des données appliquées  (La Cité, Ottawa/Gatineau)
-							</p>
+					<p>
+						Création et amélioration de visualisations selon les principes de Gestalt : cohérence,
+						regroupement, hiérarchie visuelle, lisibilité et storytelling.
+					</p>
 
-							<p class="hero-tagline">
-								J’analyse, nettoie et transforme des données en insights clairs grâce à la visualisation et au storytelling.
-							</p>
+					<ul class="actions special">
+						<li><a href="#" class="button">Démo / Rapport (à ajouter)</a></li>
+					</ul>
+				</article>
 
-							<div class="hero-actions">
-								<a href="#projects" class="button large icon solid fa-check-circle">Voir mes projets</a>
-							</div>
+				<!-- ✅ Projet ML supprimé -->
 
-							<div class="hero-links">
-								<a href="mailto:lounesdjayet112@gmail.com">lounesdjayet112@gmail.com</a>
-								<span>•</span>
-								<a href="https://github.com/Lounesdjl04" target="_blank" rel="noopener">GitHub</a>
-								<span>•</span>
-								<a href="https://www.linkedin.com/in/lounes-djayet-a0b046367/" target="_blank" rel="noopener">LinkedIn</a>
-							</div>
-						</div>
-					</div>
+			</section>
 
-				</div>
-			</div>
+			<!-- Skills -->
+			<article class="post" id="skills">
+				<header class="major">
+					<span class="date">Compétences</span>
+					<h2>Ce que je maîtrise</h2>
+					<p>Techniques + soft skills orientés entreprise</p>
+				</header>
 
-			<!-- Main Wrapper -->
-			<div id="main-wrapper">
+				<h3>Tech</h3>
+				<ul>
+					<li><strong>BI & Visualisation :</strong> Power BI, Excel, Data Viz, Storytelling</li>
+					<li><strong>Analyse & Préparation :</strong> Nettoyage, EDA, structuration, qualité des données</li>
+					<li><strong>Langages :</strong> Python, SQL, R (bases)</li>
+					<li><strong>Outils :</strong> Git/GitHub, VS Code</li>
+				</ul>
 
-				<!-- ✅ Projects -->
-				<div class="wrapper style1">
-					<div class="inner">
+				<h3>Soft skills</h3>
+				<ul>
+					<li>Organisé, rigoureux, calme sous pression</li>
+					<li>Communication claire (FR/EN), sens du service</li>
+					<li>Travail d’équipe, persévérance</li>
+				</ul>
 
-						<section class="container box feature1" id="projects">
-							<div class="row">
-								<div class="col-12">
-									<header class="first major">
-										<h2>Projets</h2>
-										<p>Analyse • Data Viz • Notebooks • Rapports</p>
-									</header>
-								</div>
-
-								<!-- Project 1 -->
-								<div class="col-4 col-12-medium">
-									<section>
-										<a href="https://github.com/Lounesdjl04/revenus-diplome-canada" target="_blank" rel="noopener" class="image featured">
-											<img src="images/pic01.jpg" alt="Recensement 2021 — Revenus & Diplôme (Canada)" />
-										</a>
-										<header class="second icon solid fa-chart-bar">
-											<h3>Recensement 2021 — Revenus & Diplôme</h3>
-											<p>Nettoyage • Visualisation • Hypothèses • Régression</p>
-										</header>
-									</section>
-								</div>
-
-								<!-- Project 2 -->
-								<div class="col-4 col-12-medium">
-									<section>
-										<a href="https://github.com/Lounesdjl04" target="_blank" rel="noopener" class="image featured">
-											<img src="images/pic02.jpg" alt="Dashboard Amazon — Power BI" />
-										</a>
-										<header class="second icon solid fa-eye">
-											<h3>Dashboard — Analyse Amazon</h3>
-											<p>Audit Power BI • Gestalt • Hiérarchie visuelle</p>
-										</header>
-									</section>
-								</div>
-
-								<!-- Project 3 -->
-								<div class="col-4 col-12-medium">
-									<section>
-										<a href="#contact" class="image featured">
-											<img src="images/pic03.jpg" alt="Projet ML" />
-										</a>
-										<header class="second icon solid fa-robot">
-											<h3>Projet ML (à compléter)</h3>
-											<p>Pipeline • Entraînement • Évaluation • Interprétation</p>
-										</header>
-									</section>
-								</div>
-
-								<div class="col-12">
-									<p>
-										Je construis des projets orientés entreprise : données propres, visualisations lisibles,
-										et conclusions actionnables. Objectif : stage/placement en 2026.
-									</p>
-								</div>
-
-							</div>
-						</section>
-
-					</div>
-				</div>
-
-				<!-- ✅ Skills -->
-				<div class="wrapper style2">
-					<div class="inner">
-						<section class="container box feature2" id="skills">
-							<div class="row">
-								<div class="col-6 col-12-medium">
-									<section>
-										<header class="major">
-											<h2>Compétences</h2>
-											<p>Outils et technologies</p>
-										</header>
-
-										<ul>
-											<li><strong>BI & Visualisation :</strong> Power BI, Excel, Data Viz, Storytelling</li>
-											<li><strong>Analyse & Préparation :</strong> Nettoyage, EDA, structuration des données</li>
-											<li><strong>Programmation :</strong> Python, SQL, R (bases)</li>
-											<li><strong>Outils :</strong> Git/GitHub, VS Code</li>
-										</ul>
-									</section>
-								</div>
-
-								<div class="col-6 col-12-medium">
-									<section id="about">
-										<header class="major">
-											<h2>À propos</h2>
-											<p>Profil & objectif</p>
-										</header>
-										<p>
-											Ancien ingénieur en automatisme industriel, je me spécialise aujourd’hui en data science.
-											J’aime résoudre des problèmes concrets avec des données : préparer, analyser, visualiser,
-											puis communiquer des résultats clairs.
-										</p>
-									</section>
-								</div>
-
-							</div>
-						</section>
-					</div>
-				</div>
-
-			</div>
-
-			<!-- Footer Wrapper -->
-			<div id="footer-wrapper">
-				<footer id="footer" class="container">
-					<div class="row">
-						<div class="col-12 imp-medium">
-
-							<!-- Contact -->
-							<section id="contact">
-								<h2>Contact</h2>
-								<div>
-									<div class="row">
-										<div class="col-6 col-12-small">
-											<dl class="contact">
-												<dt>Email</dt>
-												<dd><a href="mailto:lounesdjayet112@gmail.com">lounesdjayet112@gmail.com</a></dd>
-
-												<dt>GitHub</dt>
-												<dd><a href="https://github.com/Lounesdjl04" target="_blank" rel="noopener">github.com/Lounesdjl04</a></dd>
-
-												<dt>LinkedIn</dt>
-												<dd><a href="https://www.linkedin.com/in/lounes-djayet-a0b046367/" target="_blank" rel="noopener">
-													linkedin.com/in/lounes-djayet-a0b046367
-												</a></dd>
-											</dl>
-										</div>
-
-										<div class="col-6 col-12-small">
-											<dl class="contact">
-												<dt>Projet principal</dt>
-												<dd>
-													<a href="https://github.com/Lounesdjl04/revenus-diplome-canada" target="_blank" rel="noopener">
-														Recensement 2021 — Revenus & Diplôme (Repo)
-													</a>
-												</dd>
-
-												<dt>Localisation</dt>
-												<dd>Ottawa / Gatineau, Canada</dd>
-											</dl>
-										</div>
-
-									</div>
-								</div>
-							</section>
-
-						</div>
-
-						<div class="col-12">
-							<div id="copyright">
-								<ul class="menu">
-									<li>&copy; <span id="year"></span> Lounes Djayet. All rights reserved.</li>
-									<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-								</ul>
-							</div>
-						</div>
-
-					</div>
-				</footer>
-			</div>
+				<ul class="actions special">
+					<li><a href="#footer" class="button scrolly">Me contacter</a></li>
+				</ul>
+			</article>
 
 		</div>
 
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.dropotron.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
+		<!-- Footer -->
+		<footer id="footer">
+			<section class="split contact">
 
-		<script>
-			document.getElementById("year").textContent = new Date().getFullYear();
-		</script>
+				<section class="alt">
+					<h3>Localisation</h3>
+					<p>Ottawa / Gatineau, Canada</p>
+				</section>
 
-	</body>
+				<section>
+					<h3>Email</h3>
+					<p><a href="mailto:lounesdjayet112@gmail.com">lounesdjayet112@gmail.com</a></p>
+				</section>
+
+				<section>
+					<h3>GitHub</h3>
+					<p><a href="https://github.com/Lounesdjl04" target="_blank" rel="noopener">github.com/Lounesdjl04</a></p>
+				</section>
+
+				<section>
+					<h3>LinkedIn</h3>
+					<p><a href="https://www.linkedin.com/in/lounes-djayet-a0b046367/" target="_blank" rel="noopener">
+						linkedin.com/in/lounes-djayet-a0b046367
+					</a></p>
+				</section>
+
+				<section>
+					<h3>Projet principal</h3>
+					<p>
+						<a href="https://github.com/Lounesdjl04/revenus-diplome-canada" target="_blank" rel="noopener">
+							Recensement 2021 — Revenus & Diplôme (Repo)
+						</a>
+					</p>
+				</section>
+
+			</section>
+		</footer>
+
+		<!-- Copyright -->
+		<div id="copyright">
+			<ul>
+				<li>&copy; <span id="year"></span> Lounes Djayet</li>
+				<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+			</ul>
+		</div>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+	<script>
+		document.getElementById("year").textContent = new Date().getFullYear();
+	</script>
+</body>
 </html>
