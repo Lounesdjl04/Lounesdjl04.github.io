@@ -54,6 +54,21 @@
 			margin-right:auto;
 		}
 
+		/* images responsives propres */
+		.posts article .image.fit img,
+		.post.featured .image.main img{
+			width:100%;
+			height:auto;
+			display:block;
+		}
+
+		/* uniformiser la taille des images dans les cartes */
+		.posts article .image.fit{
+			max-width: 720px;
+			margin-left:auto;
+			margin-right:auto;
+		}
+
 		/* boutons centrés */
 		.posts article .actions,
 		.post.featured .actions{
@@ -62,35 +77,17 @@
 
 		/* ---------- FOOTER ---------- */
 		#footer .split.contact section { padding-top: 1.4rem; padding-bottom: 1.4rem; }
-		#footer form { display:none; }
+		#footer form { display:none; } /* cache formulaire inutile */
 
 		/* ---------- FIX RESPONSIVE ---------- */
 		@media (max-width: 980px){
-			.posts{
-				display:block !important;
-			}
-			.posts article{
-				width:100% !important;
-				margin: 0 0 2rem 0 !important;
-			}
+			.posts{ display:block !important; }
+			.posts article{ width:100% !important; margin: 0 0 2rem 0 !important; }
 		}
 
-		/* ---------- BLOCS "sans image" ---------- */
-		.no-thumb{
-			border: 1px solid rgba(0,0,0,.08);
-			border-radius: 10px;
-			padding: 1.25rem 1.25rem 0.25rem;
-			background: rgba(255,255,255,.04);
-		}
-		.no-thumb .pill{
-			display:inline-block;
-			margin:.4rem .25rem 0;
-			padding:.25rem .6rem;
-			border-radius:999px;
-			border:1px solid rgba(0,0,0,.12);
-			font-size:.85rem;
-			opacity:.9;
-		}
+		/* ✅ Important: éviter l’icône image cassée si une image manque */
+		img { max-width: 100%; }
+		img:not([src]), img[src=""], img[src="#"] { display:none !important; }
 	</style>
 </head>
 
@@ -157,12 +154,16 @@
 						tests d’hypothèses et modèle de régression pour identifier les facteurs les plus influents.
 					</p>
 
-					<p style="text-align:center; opacity:.9;">
+					<p class="project-tags" style="text-align:center; opacity:.9;">
 						✅ Nettoyage • ✅ Visualisation • ✅ Hypothèses • ✅ Régression
 					</p>
 				</header>
 
-				<!-- ✅ IMAGE SUPPRIMÉE (pour éviter l'icône cassée) -->
+				<!-- ✅ on garde ton image (celle qui existe) -->
+				<a href="https://github.com/Lounesdjl04/revenus-diplome-canada" target="_blank" rel="noopener" class="image main">
+					<img src="imagess/01.png" alt="Revenus moyen par diplôme — Recensement 2021"
+					     onerror="this.style.display='none';" />
+				</a>
 
 				<ul class="actions special">
 					<li>
@@ -176,24 +177,25 @@
 			<!-- Other Projects -->
 			<section class="posts">
 
-				<article id="amazon" class="no-thumb">
+				<!-- Amazon -->
+				<article id="amazon">
 					<header>
 						<span class="date">2026</span>
 						<h2>Dashboard — Analyse Amazon (Power BI)</h2>
-
-						<div>
-							<span class="pill">Audit Power BI</span>
-							<span class="pill">Gestalt</span>
-							<span class="pill">Hiérarchie visuelle</span>
-							<span class="pill">Lisibilité</span>
-						</div>
+						<p style="margin-top:.2rem; opacity:.85;">
+							Audit Power BI • Gestalt • Hiérarchie visuelle • Réduction de charge cognitive
+						</p>
 					</header>
 
-					<!-- ✅ IMAGE SUPPRIMÉE (pour éviter l'icône cassée) -->
+					<!-- ✅ on garde ton image (celle qui existe) -->
+					<a href="#" class="image fit">
+						<img src="imagess/02.png" alt="Dashboard Amazon Power BI"
+						     onerror="this.style.display='none';" />
+					</a>
 
-					<p style="margin-top:1rem;">
+					<p>
 						Création et amélioration de visualisations selon les principes de Gestalt : cohérence,
-						regroupement, hiérarchie visuelle, réduction de charge cognitive et storytelling.
+						regroupement, hiérarchie visuelle, lisibilité et storytelling.
 					</p>
 
 					<ul class="actions special">
@@ -201,6 +203,7 @@
 					</ul>
 				</article>
 
+				<!-- ✅ Projet ML supprimé -->
 			</section>
 
 			<!-- Skills -->
@@ -255,41 +258,4 @@
 				<section>
 					<h3>LinkedIn</h3>
 					<p><a href="https://www.linkedin.com/in/lounes-djayet-a0b046367/" target="_blank" rel="noopener">
-						linkedin.com/in/lounes-djayet-a0b046367
-					</a></p>
-				</section>
-
-				<section>
-					<h3>Projet principal</h3>
-					<p>
-						<a href="https://github.com/Lounesdjl04/revenus-diplome-canada" target="_blank" rel="noopener">
-							Recensement 2021 — Revenus & Diplôme (Repo)
-						</a>
-					</p>
-				</section>
-
-			</section>
-		</footer>
-
-		<div id="copyright">
-			<ul>
-				<li>&copy; <span id="year"></span> Lounes Djayet</li>
-				<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-			</ul>
-		</div>
-
-	</div>
-
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-
-	<script>
-		document.getElementById("year").textContent = new Date().getFullYear();
-	</script>
-</body>
-</html>
+						linkedin.com/in/lounes-
