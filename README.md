@@ -1,107 +1,70 @@
-# 📊 Revenus et Niveau de Diplôme au Canada (Recensement 2021)
+# 👋 Lounes Djayet
 
-Analyse des revenus moyens au Canada en fonction du **niveau de diplôme**, à partir des données officielles du **Recensement canadien 2021 (Statistique Canada)**.
+🎓 **Data Scientist | Data Analyst**  
+Ancien ingénieur en automatisme industriel, actuellement étudiant en **Sciences des données appliquées** à **La Cité (Ottawa / Gatineau)**.
 
-🔗 Source des données :  
-https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/index-fra.cfm
-
----
-
-## 🎯 Objectifs du projet
-
-- Étudier l’impact du **niveau de diplôme** sur le **revenu**
-- Identifier les variables les plus influentes (diplôme, sexe, province, domaine d’étude, âge)
-- Produire des **visualisations claires et interprétables**
-- Construire un **modèle de régression** pour expliquer les écarts de revenus
+Je transforme les données brutes en **insights clairs et exploitables** grâce à l’analyse, la visualisation et le storytelling orienté décision.
 
 ---
 
-## 🧠 Données utilisées
-
-- **Source** : Statistique Canada — Recensement 2021  
-- **Population** : Adultes actifs au Canada  
-- **Variables principales** :
-  - Niveau de diplôme
-  - Revenu
-  - Sexe
-  - Province
-  - Domaine d’étude
-  - Âge
-  - Industrie
+## 🔍 À propos de moi
+- 📊 Analyse de données & visualisation (Power BI, Excel)
+- 🧹 Nettoyage, préparation et exploration des données (EDA)
+- 📈 Statistiques, tests d’hypothèses, régression
+- 💻 Python, SQL, bases de R
+- 🔁 Git / GitHub, VS Code  
+- 🌍 Français & Anglais
 
 ---
 
-## 📈 Analyses exploratoires (EDA)
+## 🚀 Projet phare
 
-### 🔹 Revenu moyen par niveau de diplôme
+### 📊 Recensement 2021 — Revenus & Diplôme (Canada)
+Analyse des revenus selon le niveau de diplôme à partir des **données officielles du Recensement canadien 2021 (Statistique Canada)**.
 
-On observe une **augmentation progressive du revenu moyen** avec le niveau de diplôme.  
-Les revenus les plus élevés sont associés aux diplômes de type :
+🔹 Nettoyage et préparation des données  
+🔹 Analyse exploratoire (EDA)  
+🔹 Visualisations comparatives  
+🔹 Tests d’hypothèses  
+🔹 Modèle de régression  
 
-- 🎓 Maîtrise  
-- 🎓 Médecine  
-- 🎓 Doctorat  
+👉 **Repo GitHub** :  
+🔗 https://github.com/Lounesdjl04/revenus-diplome-canada  
 
-📌 Les catégories *« aucun diplôme »* et *« secondaire »* présentent les revenus moyens les plus faibles.
-
-![Revenu moyen par diplôme](images/01.png)
-
----
-
-### 🔹 Répartition des individus par sexe
-
-La répartition entre **hommes** et **femmes** est **presque équilibrée**, ce qui limite les biais liés au genre dans l’analyse globale.
-
-![Répartition par sexe](images/02.png)
+👉 **Source des données** :  
+🔗 https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/index-fra.cfm  
 
 ---
 
-## 📊 Modélisation — Régression
-
-Un modèle de **régression log-salaire** a été utilisé afin d’identifier l’importance moyenne de chaque variable.
-
-### 🔎 Importance des variables dans le modèle
-
-- **Diplôme** : facteur dominant (impact très élevé)
-- **Industrie** et **domaine d’étude** : influence notable
-- **Sexe** et **province** : effets modérés
-- **Âge** : impact plus faible
-
-👉 Le **niveau de diplôme** reste le facteur le plus déterminant du revenu.
+## 📊 Autres projets
+- **Dashboard — Analyse Amazon (Power BI)**  
+  Création et amélioration de dashboards en appliquant les **principes de Gestalt**  
+  (hiérarchie visuelle, réduction de la charge cognitive, cohérence Power BI vs Tableau).
 
 ---
 
-## 🛠️ Outils et technologies
+## 🧠 Compétences
 
-- **Python** (pandas, numpy, matplotlib, seaborn)
-- **Analyse statistique & régression**
-- **Visualisation de données**
-- **Git & GitHub**
+### Techniques
+- **Data Analysis** : EDA, nettoyage, structuration
+- **BI & Visualisation** : Power BI, Excel, storytelling
+- **Langages** : Python, SQL, R (bases)
+- **Outils** : Git, GitHub, VS Code
 
----
-
-## 📌 Résultats clés
-
-- Le diplôme est le **meilleur prédicteur du revenu**
-- Les diplômes avancés offrent un avantage salarial significatif
-- Les écarts liés au sexe existent mais restent secondaires face au diplôme
-- Les différences provinciales ont un effet mesurable mais limité
+### Soft skills
+- Organisation et rigueur
+- Communication claire (FR / EN)
+- Calme sous pression
+- Travail d’équipe et persévérance
 
 ---
 
-## 👤 Auteur
-
-**Lounes Djayet**  
-🎓 Data Scientist — Étudiant en Sciences des Données Appliquées  
-🏫 Collège La Cité (Ottawa / Gatineau)  
-
-🔗 Portfolio : https://lounesdjl04.github.io/  
-🔗 GitHub : https://github.com/Lounesdjl04  
-🔗 LinkedIn : https://www.linkedin.com/in/lounes-djayet-a0b046367/
+## 🌐 Me retrouver
+- 💼 **Portfolio** : https://lounesdjl04.github.io  
+- 🐙 **GitHub** : https://github.com/Lounesdjl04  
+- 🔗 **LinkedIn** : https://www.linkedin.com/in/lounes-djayet-a0b046367/  
+- ✉️ **Email** : lounesdjayet112@gmail.com  
 
 ---
 
-## ⚖️ Licence
-
-Données : © Statistique Canada (Recensement 2021)  
-Projet académique — usage éducatif
+⭐ N’hésite pas à explorer mes projets et à me contacter !
